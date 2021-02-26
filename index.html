@@ -8,7 +8,34 @@
     <title>Beatmaker Drum Machine</title>
 </head>
 <body>
-    
-    <script src="./app.js"></script>
+
+<div class="sequencer">
+<div class="kick-track">
+    <div class="controls">
+        <h1>Kick</h1>
+        <button data-track="0" class="mute-kick-volume">
+            <i class="fas fa-volume-mute"></i>
+        </button>
+        <select name="kick-select" id="kick-select">
+            <option value="./sounds/kick-classic.wav">Classic Kick</option>
+            <option value="./sounds/kick-808.wav">808 Kick</option>
+            <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+        </select>
+    </div>
+    <div class="kick">
+        <div class="pad kick-pad b0"></div>
+        <div class="pad kick-pad b1"></div>
+        <div class="pad kick-pad b2"></div>
+        <div class="pad kick-pad b3"></div>
+        <div class="pad kick-pad b4"></div>
+        <div class="pad kick-pad b5"></div>
+        <div class="pad kick-pad b6"></div>
+        <div class="pad kick-pad b7"></div>
+    </div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"</script>
+<script src="./app.js"></script>
 </body>
 </html>
