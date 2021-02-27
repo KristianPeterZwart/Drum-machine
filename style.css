@@ -30,7 +30,7 @@
     background: rgb(180, 221, 132);
   }
   .kick-pad.active {
-    background: rgb(4, 38, 230);
+    background: rgb(141, 155, 235);
   }
   .snare-pad.active {
     background: rgb(135, 18, 212);
@@ -71,7 +71,7 @@
   .controls button {
     padding: 1rem;
     border: none;
-    background: rgb(49, 49, 49);
+    background: rgb(88, 88, 88);
     color: white;
     font-size: 1rem;
     cursor: pointer;
