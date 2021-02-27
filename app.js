@@ -18,16 +18,19 @@ class Drumkit {
         activeBars.forEach(bar => {
             bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
             // Check if pads are active
-            if(bar.classList.contains("active")){
+            if (bar.classList.contains("active")) {
             // Check each sound
-            if(bar.classList.contains("kick-pad")){
+            if (bar.classList.contains("kick-pad")) {
+                this.kickAudio.currentTime = 0;
                 this.kickAudio.play();
             }
-            if(bar.classList.contains("snare-pad")){
+            if (bar.classList.contains("snare-pad")) {
+                this.kickAudio.currentTime = 0;
                 this.snareAudio.play();
             }
-            if(bar.classList.contains("hihat-pad")){
-                this.hihatAudio.play();
+            if (bar.classList.contains("hihat-pad")) {
+                this.kickAudio.currentTime = 0;
+                 this.hihatAudio.play();
         });
         this.index++;
     }
