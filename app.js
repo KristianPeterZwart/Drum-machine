@@ -1,5 +1,5 @@
 class Drumkit{
-    constructor(){
+    constructor() {
         this.pads = document.querySelectorAll(".pad");
         this.kickAudio = document.querySelector(".kick-sound");
         this.snareAudio = document.querySelector(".snare-sound");
@@ -8,7 +8,8 @@ class Drumkit{
     }
     repeat() {
         let step = this.index % 8;
-        console.log(step);
+        console.log(`step ${step} and index ${this.index}`);
+        this.index++;
     }
     start() {
         setInterval(() => {
@@ -19,4 +20,4 @@ class Drumkit{
 
     const drumkit = new Drumkit();
 
-    drunkKit.start();
+    drumKit.start();
