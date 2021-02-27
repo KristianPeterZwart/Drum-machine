@@ -1,4 +1,4 @@
-class Drumkit{
+class Drumkit {
     constructor() {
         this.pads = document.querySelectorAll(".pad");
         this.playBtn = document.querySelector(".play")
@@ -13,21 +13,28 @@ class Drumkit{
     }
     repeat() {
         let step = this.index % 8;
-        const activeBars = document.querySelectorAll(`.b${step}`)
+        const activeBars = document.querySelectorAll(`.b${step}`);
+        // Loop over the pads
+        activeBars.forEach(bar => {
+            bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
+        });
         this.index++;
     }
     start() {
         const interval = (60/this.bpm) * 1000;
         setInterval(() => {
             this.repeat();
-        }, 1000) ;    
+        }, interval) ;    
         }
     }
 
-    const drumkit = new Drumkit();
+const drumkit = new Drumkit();
 
-    drumkit.pads.forEach(pad => {
-        padd.addEventListener("click", drumkit.activePad);
+drumkit.pads.forEach(pad => {
+        pad.addEventListener("click", Drumkit.activePad);
+        pad.addEventListener("animationend", function(){
+         this.style.animation = "";   
+        });
     });
 
 
